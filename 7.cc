@@ -13,8 +13,7 @@ int main(){
 	for(int i = 2; i < 10001; i++){
 		c=prime[i-1];
 		while(!prime[i]){
-			c++;
-			c++;
+			c+=2;
 			for (int j = 0; j < i; j++){
 				if (j==i-1){
 					prime[i]=c;
