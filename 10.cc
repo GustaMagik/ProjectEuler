@@ -1,30 +1,27 @@
 #include <iostream>
 #include <list>
+#include <cmath>
 int main(){
 	int ans = 0;
-	int c = 3;
-	long long int sum =0;
-	bool not_prime = false;
+	long long int sum = 2;
+	bool prime = false;
 	std::list<int> primes;
 	primes.push_back(2);
-	while (c < 2000000){
+	for (int c = 3; c < 2000000; c += 2){
 		
-		not_prime = false;
+		prime = true;
 		for (std::list<int>::iterator it=primes.begin(); it != primes.end(); it++){
-			if (!(c%*it)){
-				not_prime=true;
+			
+			if (c % *it == 0) {
+				prime=false;
 				break;
 			}
+			if (sqrt(c) < *it) { break; }
 		}
-		if(!not_prime){
+		if(prime){
 			primes.push_back(c);
-			std::cout << c << "\n";
+			sum += c;
 		}
-		c+=2;
-	}
-	for (std::list<int>::iterator it=primes.begin(); it != primes.end(); it++){
-    	std::cout << *it << "\n";
-    	sum += *it;
 	}
 	std::cout << sum  << "\n";
 	return 0;
