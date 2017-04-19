@@ -20,7 +20,7 @@ int main(){
 		}
 		if(prime){
 			primes.push_back(c);
-			sum += c;
+			//sum += c;
 		}
 	}
 	std::cout << sum  << "\n";
