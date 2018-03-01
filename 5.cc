@@ -18,3 +18,4 @@ int main(){
 	std::cout << b << "\n";
 	return 0;
 }
+
