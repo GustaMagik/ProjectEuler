@@ -5,7 +5,6 @@
 #include <vector>
 using namespace std;
 
-
 class Node
 {
 public:
@@ -41,7 +40,7 @@ public:
 	Node * left = NULL;
 };
 
-
+//
 int main(int argc, char *argv[])
 {
 	if(argc == 2){
