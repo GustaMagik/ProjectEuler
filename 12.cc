@@ -1,5 +1,4 @@
 #include <iostream>
-#include <list>
 #include <math.h>
 
 // Finds the first triangular number with 500 divisors
