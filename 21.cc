@@ -1,11 +1,9 @@
 #include <iostream>
 #include <math.h>
 #include <unordered_set>
-#include <vector>
 using namespace std;
 
 unordered_set<int> amicables;
-vector<int> divisors;
 
 bool isAmicable (int in);
 int divisorSum (int i);
@@ -47,19 +45,15 @@ bool isAmicable (int in){
 
 //Find sum of all divisors less than i
 int divisorSum (int i){
-	//Find divisors
-	divisors.push_back(1);
-	for(int d = 2; d < sqrt(i);d++){
-		if(i % d == 0){
-			divisors.push_back(d);
-			divisors.push_back(i/d);
-		}		
+	//Find sum of divisors
+	int sum = 1;
+	int sq = sqrt(i);
+	if(i == sq*sq){
+		sum -= sq;
 	}
-	//Sum divisors
-	int sum = 0;
-	for(auto i : divisors){
-		sum += i;
+	for(int d = 2; d <= sq;d++){
+		if(i % d == 0)
+			sum += d + i/d;		
 	}
-	divisors.clear();
 	return sum;
 }
