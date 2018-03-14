@@ -64,6 +64,7 @@ void morePrimes(int stop){
 		for (int j = 0; primes[j] <= sqrt(i);j++){
 			if(i % primes[j] == 0){
 				b = false;
+				break;
 			}
 		}
 		if(b){
