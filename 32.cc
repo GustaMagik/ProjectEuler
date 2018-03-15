@@ -6,11 +6,8 @@
 #include <string>
 using namespace std;
 
-vector<int> vPrime = {2};
-unordered_set<int> uPrime;
 unordered_set<int> combinations;
 
-void primeSetup();
 void combiSetup();
 bool isPandigital(int p);
 
